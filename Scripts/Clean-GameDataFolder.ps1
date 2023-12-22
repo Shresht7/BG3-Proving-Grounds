@@ -3,6 +3,15 @@
     Cleans the Baldurs Gate 3 Game Data folder
 .DESCRIPTION
     Removes the Mods and Public from the Baldurs Gate 3 Data folder
+.EXAMPLE
+    . .\Script\Clean-GameDataFolder.ps1
+    Run the script to remove the Mods and Public folders
+.EXAMPLE
+    . .\Script\Clean-GameDataFolder.ps1 -WhatIf
+    Perform a dry-run to see what modifications the script will make.
+.EXAMPLE
+    . .\Script\Clean-GameDataFolder.ps1 -BG3Path "C:\Games\Baldurs Gate 3"
+    Run the script by specifying the game's folder
 #>
 [CmdletBinding(SupportsShouldProcess)]
 param (

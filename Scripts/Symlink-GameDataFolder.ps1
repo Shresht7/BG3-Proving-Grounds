@@ -6,6 +6,15 @@
     This allows changes made here to be immediately reflected in the game.
     This also allows you to make use of the power of git to switch between projects seamlessly
     (using branches) without having to touch the Game's Data directory every time.
+.EXAMPLE
+    . .\Script\Symlink-GameDataFolder.ps1
+    Run the script to symlink the Mods and Public folder to the Game's Data directory.
+.EXAMPLE
+    . .\Script\Symlink-GameDataFolder.ps1 -WhatIf
+    Perform a dry-run to see what modifications the script will make.
+.EXAMPLE
+    . .\Script\Symlink-GameDataFolder.ps1 -BG3Path "C:\Games\Baldurs Gate 3"
+    Run the script by specifying the path to the game's folder
 #>
 [CmdletBinding(SupportsShouldProcess)]
 param (
