@@ -1,4 +1,4 @@
 new entry "Target_Light"
 type "SpellData"
 using "Target_Light"
-data "SpellSuccess" "AI_IGNORE:IF(Item()):ApplyStatus(LIGHT,100,20);IF(not Item()):ApplyEquipmentStatus(MainHand,LIGHT,100,-1);AI_ONLY:CAST:ApplyStatus(SELF, AI_STATUS_FAKE,100,10);"
+data "SpellSuccess" "AI_IGNORE:IF(Item()):ApplyStatus(LIGHT,100,50);IF(not Item()):ApplyEquipmentStatus(MainHand,LIGHT,100,-1);AI_ONLY:CAST:ApplyStatus(SELF, AI_STATUS_FAKE,100,10);"
