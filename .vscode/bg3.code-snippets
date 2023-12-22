@@ -27,6 +27,21 @@
             "end)\n"
         ]
     },
+    "Script-Extender-Config": {
+        "prefix": ["cfg", "Config.json"],
+        "description": "Script-Extender-Config",
+        "scope": "jsonc",
+        "body": [
+            "{",
+            "    \"RequiredVersion\": ${1:1},",
+            "    \"ModTable\": \"${TM_DIRECTORY/^.*\\\\(.*)\\\\ScriptExtender$/$1/}\",",
+            "    \"FeatureFlags\": [",
+            "        \"Lua\"$0",
+            "    ]",
+            "}",
+            ""
+          ]
+    },
     "meta.lsx": {
         "prefix": "meta",
         "description": "meta.lsx",
