@@ -6,17 +6,17 @@
 #>
 param (
     # Path to the Baldurs Gate 3 folder
-    [ValidateScript({ Test-Path -Path $Path })]
-    [string] $PATH = $Env:BG3_PATH
+    [ValidateScript({ Test-Path -Path $_ })]
+    [string] $BG3Path = $Env:BG3_PATH
 )
 
 # Check path
-if (!(Test-Path -Path (Join-Path $Path "bin\bg3.exe"))) {
-    throw "Invalid Path: $PATH. Please provide the path to the Baldurs Gate 3 folder"
+if (!(Test-Path -Path (Join-Path $BG3Path "bin\bg3.exe"))) {
+    throw "Invalid Path: $BG3Path. Please provide the path to the Baldurs Gate 3 folder"
 }
 
 # Determine paths
-$GameDataFolder = Join-Path $Path "Data"
+$GameDataFolder = Join-Path $BG3Path "Data"
 $ModsFolder = Join-Path $GameDataFolder "Mods"
 $PublicFolder = Join-Path $GameDataFolder "Public"
 

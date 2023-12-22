@@ -7,13 +7,21 @@
 #>
 param (
     # Path to the Baldurs Gate 3 folder
-    [ValidateScript({ Test-Path -Path $Path })]
-    [string] $PATH = $Env:BG3_PATH
+    [ValidateScript({ Test-Path -Path $_ })]
+    [string] $BG3Path = $Env:BG3_PATH,
+
+    # Name of the Mod
+    [ValidateNotNullOrEmpty()]
+    [string] $ModName = "S7_ProvingGrounds",
+
+    # UUID of the Mod
+    [ValidatePattern('^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$')]
+    [string] $ModUUID = "07d5faee-0c54-4787-8b39-e3f45a52145d"
 )
 
 # Check path
-if (!(Test-Path -Path (Join-Path $Path "bin\bg3.exe"))) {
-    throw "Invalid Path: $PATH. Please provide the path to the Baldurs Gate 3 folder"
+if (!(Test-Path -Path (Join-Path $BG3Path "bin\bg3.exe"))) {
+    throw "Invalid Path: $BG3Path. Please provide the path to the Baldurs Gate 3 folder"
 }
 
 # Check if the script is running with administrator privilege
@@ -26,12 +34,10 @@ if (!$MyPrincipal.IsInRole([System.Security.Principal.WindowsBuiltInRole]::Admin
 }
 
 # Constants
-$ModName = "S7_ProvingGrounds"
-$ModUUID = "07d5faee-0c54-4787-8b39-e3f45a52145d"
 $ModID = "$($ModName)_$($ModUUID)"
 
 # Determine paths
-$GameDataFolder = Join-Path $Path "Data"
+$GameDataFolder = Join-Path $BG3Path "Data"
 $ModsFolder = Join-Path $GameDataFolder "Mods"
 $PublicFolder = Join-Path $GameDataFolder "Public"
 
