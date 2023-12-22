@@ -5,6 +5,7 @@
 <!-- See https://bg3.wiki/wiki/Modding:Creating_meta.lsx for more information -->
 
 <save>
+    <!-- ? This may need to be updated periodically? -->
     <version major="4" minor="0" revision="9" build="331"/>
     <region id="Config">
         <node id="root">
