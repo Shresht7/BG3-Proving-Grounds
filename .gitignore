@@ -1,0 +1,8 @@
+# Osiris Artefacts
+**/*.raw
+**/Story/*.div
+**/*.osi
+**/*.dat
+
+# Build Artefacts
+*.zip

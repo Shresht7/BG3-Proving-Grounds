@@ -1,0 +1,30 @@
+{
+    "BG3 UUID": {
+        "prefix": "uuid",
+        "description": "Generate a random UUID",
+        "scope": "xml",
+        "body": ["${UUID}"]
+    },
+    "BG3 Handle": {
+        "prefix": "handle",
+        "description": "Generates a random UUID handle used in localization files",
+        "scope": "xml",
+        "body": ["h${UUID/[-]/g/g}"]
+    },
+    "Ext.Utils.Print()": {
+        "prefix": ["print", "eup"],
+        "description": "Ext.Utils.Print()",
+        "scope": "lua",
+        "body": ["Ext.Utils.Print($1)\n$0"]
+    },
+    "Ext.Osiris.RegisterListener()": {
+        "prefix": ["rl", "orl", "eorl"],
+        "description": "Ext.Orisis.RegisterListener()",
+        "scope": "lua",
+        "body": [
+            "Ext.Osiris.RegisterListener(\"$1\", $4, \"${2|after,before|}\", function ($3)",
+            "\t$0",
+            "end)\n"
+        ]
+    }
+}

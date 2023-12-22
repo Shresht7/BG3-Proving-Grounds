@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- meta.lsx: Contains metadata information about the mod -->
+<!-- Read the comments to see what you need to change in this file -->
+<!-- See https://bg3.wiki/wiki/Modding:Creating_meta.lsx for more information -->
+
+<save>
+    <version major="4" minor="0" revision="9" build="331"/>
+    <region id="Config">
+        <node id="root">
+            <children>
+
+                <!-- Dependencies: A list of things this mod depends on -->
+                <!-- see https://bg3.wiki/wiki/Modding:Dependencies for more information -->
+                <node id="Dependencies"/>
+
+                <!-- ModuleInfo: Metadata about the mod -->
+                <node id="ModuleInfo">
+
+                    <!-- Author: Name of the mod author -->
+                    <attribute id="Author" type="LSWString" value="_____AUTHOR_____"/>
+
+                    <attribute id="CharacterCreationLevelName" type="FixedString" value=""/>
+
+                    <!-- Description: Description of the mod -->
+                    <attribute id="Description" type="LSWString" value="_____DESCRIPTION_____"/>
+
+                    <!-- Folder: Name of the ModFolder -->
+                    <attribute id="Folder" type="LSWString" value="_____MODNAME___________MODUUID_____"/>
+
+                    <attribute id="GMTemplate" type="FixedString" value=""/>
+                    <attribute id="LobbyLevelName" type="FixedString" value=""/>
+                    <attribute id="MD5" type="LSString" value=""/>
+                    <attribute id="MainMenuBackgroundVideo" type="FixedString" value=""/>
+                    <attribute id="MenuLevelName" type="FixedString" value=""/>
+
+                    <!-- Name: Name of the Mod. Please use an unique identifier like PREFIX_ModName (e.g. S7_Config) -->
+                    <attribute id="Name" type="FixedString" value="_____MODNAME_____"/>
+
+                    <attribute id="NumPlayers" type="uint8" value="4"/>
+                    <attribute id="PhotoBooth" type="FixedString" value=""/>
+                    <attribute id="StartupLevelName" type="FixedString" value=""/>
+
+                    <!-- Tags: A list of tags/keywords describing the mod. (delimited by a semi-colon) -->
+                    <attribute id="Tags" type="LSWString" value="_____TAGS_____"/>
+
+                    <attribute id="Type" type="FixedString" value="Add-on"/>
+
+                    <!-- UUID: A universally unique identifier for the mod -->
+                    <attribute id="UUID" type="FixedString" value="_____MODUUID_____"/>
+
+                    <!-- Version64: An `Int64` representation of the version number of the mod -->
+                    <!-- * Use BG3MM to generate this value. You'll want to update this as you change the version number of the mod. * -->
+                    <!-- e.g. version 1.0.0.0 corresponds to 36028797018963968 -->
+                    <attribute id="Version64" type="int64" value="36028797018963968"/>
+
+                    <children>
+
+                        <!-- This version number is the version it was when published. -->
+                        <!-- This is more for Larian than it is for mod developers. You can leave it as is. -->
+                        <node id="PublishVersion">
+                            <attribute id="Version64" type="int64" value="36028797018963968"/>
+                        </node>
+
+                        <node id="Scripts" />
+
+                        <node id="TargetModes">
+                            <children>
+                                <node id="Target">
+                                    <attribute id="Object" type="FixedString" value="Story"/>
+                                </node>
+                            </children>
+                        </node>
+
+                    </children>
+
+                </node>
+
+            </children>
+        </node>
+    </region>
+</save>

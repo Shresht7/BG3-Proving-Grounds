@@ -1,0 +1,27 @@
+{
+    // This should point to the directory containing the IDEHelpers. The Lua globals
+    // from the library will be available to use in this workspace.
+    "Lua.workspace.library": [
+        "C:\\Games\\Modding\\Baldur's Gate III\\Script-Extender\\Library"
+    ],
+    "Lua.diagnostics.libraryFiles": "Disable",
+    "Lua.diagnostics.workspaceRate": 25,
+    "Lua.diagnostics.workspaceDelay": 5000,
+    "Lua.workspace.preloadFileSize": 10000,
+    "Lua.diagnostics.globals": [
+        "Osi",
+        "Ext"
+    ],
+    // Create file associations for Larian Studios specific files
+    "files.associations": {
+        "*.lsx": "xml",
+        "*.lsj": "json"
+    },
+    // Tells the VS Code search to ignore Osiris compiled files
+    "search.exclude": {
+        "**/*.raw": true,
+        "**/Story/*.div": true,
+        "**/*.osi": true,
+        "**/*.dat": true
+    }
+}
