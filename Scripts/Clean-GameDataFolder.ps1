@@ -21,4 +21,4 @@ $ModsFolder = Join-Path $GameDataFolder "Mods"
 $PublicFolder = Join-Path $GameDataFolder "Public"
 
 # Clean the folder
-$ModsFolder, $PublicFolder | Remove-Item
+$ModsFolder, $PublicFolder | Where-Object { Test-Path -Path $_ } | Remove-Item
