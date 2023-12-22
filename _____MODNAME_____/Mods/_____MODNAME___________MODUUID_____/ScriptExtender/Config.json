@@ -1,7 +1,0 @@
-{
-    "RequiredVersion": 1,
-    "ModTable": "_____MODNAME___________MODUUID_____",
-    "FeatureFlags": [
-        "Lua"
-    ]
-}

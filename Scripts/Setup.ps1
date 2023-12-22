@@ -39,19 +39,19 @@ param(
 
 # Placeholder values and their replacements
 $Placeholders = @(
-    @("_____MODNAME_____", $Name),
-    @("_____MODUUID_____", $UUID),
-    @("_____DESCRIPTION_____", $Description),
-    @("_____TAGS_____", $Tags),
-    @("_____AUTHOR_____", $Author)
+    @("S7_ProvingGrounds", $Name),
+    @("07d5faee-0c54-4787-8b39-e3f45a52145d", $UUID),
+    @("A BG3 mod where ideas, concepts and experiments are tested", $Description),
+    @("ideas;dev;testing;proving-grounds;experiments", $Tags),
+    @("Shresht7", $Author)
 )
 
 # Iterate over every file and directory in this workspace
 Get-ChildItem -Recurse | ForEach-Object {
     
-    # Rename all placeholder files and directories. That is items with _____MODNAME_____ and _____MODUUID_____ placeholders.
-    if ($_.BaseName.EndsWith("_____MODNAME_____") -or $_.BaseName.EndsWith("_____MODUUID_____")) {
-        $NewName = $_.FullName.Replace("_____MODNAME_____", $Name).Replace("_____MODUUID_____", $UUID)
+    # Rename all placeholder files and directories. That is items with S7_ProvingGrounds and 07d5faee-0c54-4787-8b39-e3f45a52145d placeholders.
+    if ($_.BaseName.EndsWith("S7_ProvingGrounds") -or $_.BaseName.EndsWith("07d5faee-0c54-4787-8b39-e3f45a52145d")) {
+        $NewName = $_.FullName.Replace("S7_ProvingGrounds", $Name).Replace("07d5faee-0c54-4787-8b39-e3f45a52145d", $UUID)
         Write-Verbose "Renaming $($_.FullName.Split($PWD)[-1]) to $($NewName.Split($PWD)[-1])"
         Rename-Item -Path $_.FullName -NewName $NewName.Split("\")[-1] -Force
     }

@@ -1,0 +1,7 @@
+{
+    "RequiredVersion": 1,
+    "ModTable": "S7_ProvingGrounds_07d5faee-0c54-4787-8b39-e3f45a52145d",
+    "FeatureFlags": [
+        "Lua"
+    ]
+}

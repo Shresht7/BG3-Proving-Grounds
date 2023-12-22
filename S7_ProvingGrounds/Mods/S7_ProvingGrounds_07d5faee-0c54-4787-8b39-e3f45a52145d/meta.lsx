@@ -18,15 +18,15 @@
                 <node id="ModuleInfo">
 
                     <!-- Author: Name of the mod author -->
-                    <attribute id="Author" type="LSWString" value="_____AUTHOR_____"/>
+                    <attribute id="Author" type="LSWString" value="Shresht7"/>
 
                     <attribute id="CharacterCreationLevelName" type="FixedString" value=""/>
 
                     <!-- Description: Description of the mod -->
-                    <attribute id="Description" type="LSWString" value="_____DESCRIPTION_____"/>
+                    <attribute id="Description" type="LSWString" value="A BG3 mod where ideas, concepts and experiments are tested"/>
 
                     <!-- Folder: Name of the ModFolder -->
-                    <attribute id="Folder" type="LSWString" value="_____MODNAME___________MODUUID_____"/>
+                    <attribute id="Folder" type="LSWString" value="S7_ProvingGrounds_07d5faee-0c54-4787-8b39-e3f45a52145d"/>
 
                     <attribute id="GMTemplate" type="FixedString" value=""/>
                     <attribute id="LobbyLevelName" type="FixedString" value=""/>
@@ -35,19 +35,19 @@
                     <attribute id="MenuLevelName" type="FixedString" value=""/>
 
                     <!-- Name: Name of the Mod. Please use an unique identifier like PREFIX_ModName (e.g. S7_Config) -->
-                    <attribute id="Name" type="FixedString" value="_____MODNAME_____"/>
+                    <attribute id="Name" type="FixedString" value="S7_ProvingGrounds"/>
 
                     <attribute id="NumPlayers" type="uint8" value="4"/>
                     <attribute id="PhotoBooth" type="FixedString" value=""/>
                     <attribute id="StartupLevelName" type="FixedString" value=""/>
 
                     <!-- Tags: A list of tags/keywords describing the mod. (delimited by a semi-colon) -->
-                    <attribute id="Tags" type="LSWString" value="_____TAGS_____"/>
+                    <attribute id="Tags" type="LSWString" value="ideas;dev;testing;proving-grounds;experiments"/>
 
                     <attribute id="Type" type="FixedString" value="Add-on"/>
 
                     <!-- UUID: A universally unique identifier for the mod -->
-                    <attribute id="UUID" type="FixedString" value="_____MODUUID_____"/>
+                    <attribute id="UUID" type="FixedString" value="07d5faee-0c54-4787-8b39-e3f45a52145d"/>
 
                     <!-- Version64: An `Int64` representation of the version number of the mod -->
                     <!-- * Use BG3MM to generate this value. You'll want to update this as you change the version number of the mod. * -->
