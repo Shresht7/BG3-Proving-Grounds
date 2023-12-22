@@ -1,6 +1,10 @@
-# BG3 Mod Template
+# `BG3-Proving-Grounds`
 
-This is a template repository for a mod for **[Baldur's Gate 3]** by **[Larian Studios]**. Read [TEMPLATE.md](./TEMPLATE.md) for more details.
+This mod project is a proving-grounds for ideas and experiments that I want to prototype, without turning them into an actual mod yet. This repository is an amalgamation of a variety of mod-ideas, where an idea is tested before it evolves into a separate project of its own.
+
+## Repository Structure
+
+The mod files are symlinked loosely to the Game's data folder instead being `.pak`ed - as the entire point of this project is quick-iteration and prototyping.
 
 ## 📦 Installation
 
