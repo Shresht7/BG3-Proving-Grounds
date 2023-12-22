@@ -4,6 +4,7 @@
 .DESCRIPTION
     Removes the Mods and Public from the Baldurs Gate 3 Data folder
 #>
+[CmdletBinding(SupportsShouldProcess)]
 param (
     # Path to the Baldurs Gate 3 folder
     [ValidateScript({ Test-Path -Path $_ })]

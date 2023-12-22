@@ -7,6 +7,7 @@
     This also allows you to make use of the power of git to switch between projects seamlessly
     (using branches) without having to touch the Game's Data directory every time.
 #>
+[CmdletBinding(SupportsShouldProcess)]
 param (
     # Path to the Baldurs Gate 3 folder
     [ValidateScript({ Test-Path -Path $_ })]
