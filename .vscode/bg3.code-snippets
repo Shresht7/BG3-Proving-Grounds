@@ -27,6 +27,17 @@
             "end)\n"
         ]
     },
+    "Override Stat Entry": {
+        "prefix": ["new", "override"],
+        "description": "Create an override for an existing Stat Entry",
+        "scope": "plaintext",
+        "body": [
+            "new entry \"$1\"",
+            "type \"SpellData\"",
+            "using \"$1\"",
+            "data $0"
+        ]
+    },
     "Script-Extender-Config": {
         "prefix": ["cfg", "Config.json"],
         "description": "Script-Extender-Config",
