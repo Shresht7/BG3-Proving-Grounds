@@ -6,4 +6,6 @@
 
 # Build Artefacts
 Build/
+*.loca
+*.lsf
 *.zip
