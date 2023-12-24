@@ -24,7 +24,7 @@ param(
     [ValidateNotNullOrEmpty()]
     [ValidateScript({ Test-Path -Path $_ -PathType Container })]
     [Alias("Name", "Root", "ModName", "ModFolder")]
-    [string] $Path = "_____MODNAME_____",
+    [string] $Path = "S7_ProvingGrounds",
 
     # Path to the Build Output directory
     [ValidateScript({ Test-Path -Path $_.DirectoryName -PathType Container })]
