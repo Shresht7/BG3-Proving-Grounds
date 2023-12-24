@@ -5,4 +5,5 @@
 **/*.dat
 
 # Build Artefacts
+Build/
 *.zip
