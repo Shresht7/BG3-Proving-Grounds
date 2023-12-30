@@ -1,3 +1,4 @@
+// Reminder: Keep this in sync with https://github.com/Shresht7/vscode-bg3-modding/blob/main/snippets/bg3.code-snippets
 {
     "BG3 UUID": {
         "prefix": "uuid",
