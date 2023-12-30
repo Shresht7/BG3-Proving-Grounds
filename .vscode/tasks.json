@@ -4,9 +4,10 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build Package",
+            "label": "📦 Build Package",
             "type": "shell",
             "options": {
+                "cwd": "${workspaceFolder}",
                 "shell": {
                     "executable": "pwsh",
                     "args": [
@@ -14,10 +15,32 @@
                     ]
                 }
             },
-            "command": "./Scripts/Build.ps1",
-            "args": [],
+            "command": "${workspaceFolder}/Scripts/Build.ps1",
+            "detail": "Builds the Mod Project using `divine.exe` (lslib)",
+            "args": [
+                "-Version",
+                "${input:versionKind}",
+            ],
             "problemMatcher": [],
-            "group": "build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
         }
+    ],
+    "inputs": [
+        {
+            "id": "versionKind",
+            "type": "pickString",
+            "description": "Update Version",
+            "options": [
+                "Build",
+                "Revision",
+                "Minor",
+                "Major",
+                "None",
+            ],
+            "default": "Build"
+        },
     ]
 }
